@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 
-function Navbar({ cartCount = 0, onSearch }) {
+function Navbar({ cartCount = 0, onSearch, onCartClick }) {
   const [searchText, setSearchText] = useState("");
   const [language, setLanguage] = useState("en");
 
@@ -57,7 +57,7 @@ function Navbar({ cartCount = 0, onSearch }) {
       </button>
 
       {/* 5. Cart */}
-      <button className="nav-btn">
+      <button className="nav-btn" onClick={onCartClick}>
         🛍️ Cart <span className="badge">{cartCount}</span>
       </button>
 
