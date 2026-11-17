@@ -34,7 +34,9 @@ function Navbar({ cartCount = 0, onSearch }) {
           type="text"
           placeholder="Search products..."
           value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
+          onChange={(e) => {setSearchText(e.target.value);
+            if (onSearch) onSearch(e.target.value);
+          }}
         />
         <button type="submit">Search</button>
       </form>

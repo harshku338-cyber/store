@@ -1,0 +1,24 @@
+.product-card {
+  background: var(--card-bg);
+  color: var(--text);
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.product-card .price {
+  font-weight: bold;
+}
+
+.product-card button {
+  background: #f59e0b;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-card .out {
+  color: #ef4444;
+  font-weight: bold;
+}
