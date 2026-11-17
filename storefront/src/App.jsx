@@ -3,12 +3,12 @@ import Navbar from "./components/Navbar";
 import ProductCard from "./components/ProductCard";
 
 const products = [
-  { id: 1, name: "Rice 1kg", price: 60, stock: 20 },
-  { id: 2, name: "Sugar 1kg", price: 45, stock: 0 },
-  { id: 3, name: "Wheat Flour 5kg", price: 220, stock: 12 },
-  { id: 4, name: "Tea 250g", price: 110, stock: 8 },
-  { id: 5, name: "Salt 1kg", price: 25, stock: 30 },
-  { id: 6, name: "Cooking Oil 1L", price: 150, stock: 5 },
+  { id: 1, name: "Rice 1kg", price: 60, stock: 20, image: "/images/rice.jpg" },
+  { id: 2, name: "Sugar 1kg", price: 45, stock: 0, image: "/images/sugar.jpg" },
+  { id: 3, name: "Wheat Flour 5kg", price: 220, stock: 12, image: "/images/flour.jpg" },
+  { id: 4, name: "Tea 250g", price: 110, stock: 8, image: "/images/tea.jpg" },
+  { id: 5, name: "Salt 1kg", price: 25, stock: 30, image: "/images/salt.jpg" },
+  { id: 6, name: "Cooking Oil 1L", price: 150, stock: 5, image: "/images/oil.jpg" },
 ];
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
             name={p.name}
             price={p.price}
             stock={p.stock}
+            image={p.image}
             onAdd={() => setCartCount(cartCount + 1)}
           />
         ))}

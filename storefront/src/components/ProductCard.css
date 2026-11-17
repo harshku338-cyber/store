@@ -22,3 +22,11 @@
   color: #ef4444;
   font-weight: bold;
 }
+
+.product-card img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
