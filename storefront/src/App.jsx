@@ -63,6 +63,14 @@ function App() {
   }
 
   function confirmOrder() {
+    // reduce stock for every item that was bought
+    setProducts(
+      products.map((p) => {
+       const bought = cart.find((item) => item.id === p.id);
+       return bought ? { ...p, stock: p.stock - bought.qty } : p;
+     })
+    );
+
     setCart([]);
     setShowBill(false);
     setShowCart(false);
