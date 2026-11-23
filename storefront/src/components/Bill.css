@@ -1,0 +1,75 @@
+.bill-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.bill {
+  background: white;
+  color: black;
+  width: 420px;
+  max-width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.bill h2,
+.bill-date {
+  text-align: center;
+  margin: 4px 0;
+}
+
+.bill table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.bill th,
+.bill td {
+  text-align: left;
+  padding: 6px 4px;
+  border-bottom: 1px solid #ddd;
+}
+
+.bill-total {
+  text-align: right;
+}
+
+.bill-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.bill-actions button {
+  flex: 1;
+  padding: 8px;
+  cursor: pointer;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .bill,
+  .bill * {
+    visibility: visible;
+  }
+  .bill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .no-print {
+    display: none;
+  }
+}
