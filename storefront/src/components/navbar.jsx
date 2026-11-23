@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 
-function Navbar({ cartCount = 0, onSearch, onCartClick }) {
+function Navbar({ cartCount = 0, onSearch, onCartClick, page, onPageChange }) {
   const [searchText, setSearchText] = useState("");
   const [language, setLanguage] = useState("en");
 
@@ -54,6 +54,11 @@ function Navbar({ cartCount = 0, onSearch, onCartClick }) {
       {/* 4. Theme toggle */}
       <button className="nav-btn" onClick={toggleTheme}>
         {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+      </button>
+      
+      {/* Switch page */}
+      <button className="nav-btn" onClick={onPageChange}>
+        {page === "shop" ? "📦 Manage Stock" : "🏪 Shop"}
       </button>
 
       {/* 5. Cart */}
